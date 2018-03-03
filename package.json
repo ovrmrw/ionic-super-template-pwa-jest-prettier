@@ -13,7 +13,8 @@
     "ionic:serve": "ionic-app-scripts serve",
     "test": "jest",
     "test:w": "jest --watch",
-    "test:ci": "jest --runInBand"
+    "test:ci": "jest --runInBand",
+    "deploy": "gh-pages -d www"
   },
   "dependencies": {
     "@angular/common": "5.0.3",
@@ -41,6 +42,7 @@
   "devDependencies": {
     "@ionic/app-scripts": "3.1.8",
     "@types/jest": "^22.1.4",
+    "gh-pages": "^1.1.0",
     "jest": "^22.4.2",
     "jest-preset-angular": "^5.2.0",
     "prettier": "^1.11.1",
