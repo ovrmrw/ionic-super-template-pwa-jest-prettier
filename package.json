@@ -9,7 +9,10 @@
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve"
+    "ionic:serve": "ionic-app-scripts serve",
+    "test": "jest",
+    "test:w": "jest --watch",
+    "test:ci": "jest --runInBand"
   },
   "dependencies": {
     "@angular/common": "5.0.3",
@@ -36,9 +39,23 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.1.8",
+    "@types/jest": "^22.1.4",
+    "jest": "^22.4.2",
+    "jest-preset-angular": "^5.2.0",
     "prettier": "^1.11.1",
     "tslint-config-prettier": "^1.9.0",
     "typescript": "2.4.2"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "jest": {
+    "preset": "jest-preset-angular",
+    "roots": [
+      "src"
+    ],
+    "testRegex": "\\.spec\\.ts$",
+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupJest.ts",
+    "transformIgnorePatterns": [
+      "node_modules/(?!@ngrx|@ionic-native|@ionic)"
+    ]
+  }
 }
