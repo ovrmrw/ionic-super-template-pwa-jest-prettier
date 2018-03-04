@@ -37,14 +37,14 @@ describe('WelcomePage', () => {
 
     it('when login function is called.', () => {
       welcomePage.login();
-      expect(mockNavController.push).toHaveBeenCalledTimes(1);
-      expect(mockNavController.push).toBeCalledWith('LoginPage');
+      expect(mockNavController.push.mock.calls.length).toBe(1);
+      expect(mockNavController.push.mock.calls[0]).toEqual(['LoginPage']);
     });
 
     it('when signup function is called.', () => {
       welcomePage.signup();
-      expect(mockNavController.push).toHaveBeenCalledTimes(1);
-      expect(mockNavController.push).toBeCalledWith('SignupPage');
+      expect(mockNavController.push.mock.calls.length).toBe(1);
+      expect(mockNavController.push.mock.calls[0]).toEqual(['SignupPage']);
     });
   });
 });
