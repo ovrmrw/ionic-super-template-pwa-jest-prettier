@@ -9,14 +9,14 @@ const mockNavController = {
 };
 
 describe('WelcomePage', () => {
-  beforeEach(() => {
+  beforeEach(() =>
     TestBed.configureTestingModule({
       declarations: [WelcomePage],
       imports: [IonicModule.forRoot(WelcomePage), TranslateModule.forRoot()],
       providers: [{ provide: NavController, useValue: mockNavController }],
       schemas: [NO_ERRORS_SCHEMA]
-    }).compileComponents();
-  });
+    }).compileComponents()
+  );
 
   describe('with injection', () => {
     let fixture: ComponentFixture<WelcomePage>;

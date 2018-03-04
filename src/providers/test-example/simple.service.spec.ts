@@ -2,11 +2,11 @@ import { TestBed } from '@angular/core/testing';
 import { SimpleService } from './simple.service';
 
 describe('SimpleService', () => {
-  beforeEach(() => {
+  beforeEach(() =>
     TestBed.configureTestingModule({
       providers: [SimpleService]
-    });
-  });
+    })
+  );
 
   describe('with injection', () => {
     let simpleService: SimpleService;
